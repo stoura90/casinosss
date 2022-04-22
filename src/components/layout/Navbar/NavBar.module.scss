@@ -1,0 +1,33 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.NavBar {
+  .navLink {
+    display: flex;
+    align-items: center;
+    padding: 6px 25px 6px 30px;
+    font-weight: 600;
+    font-size: 1.375rem;
+    color: #050505;
+    text-decoration: none;
+    border-radius: 6px;
+
+    &.active {
+      background-color: rgba(42, 0, 114, 0);
+    }
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+
+    .icon {
+      margin-right: 15px;
+    }
+  }
+}

@@ -1,0 +1,166 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.PartnerModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  padding: 29px 0 52px;
+  background-color: #0b2e13;
+  overflow-y: scroll;
+
+  @include media-breakpoint-up(xl) {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 860px;
+    height: 670px;
+    padding: 20px 18px;
+    background-color: #0b2e13;
+    border-radius: 10px;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  .closeButton {
+    display: block;
+    margin-left: auto;
+
+    @include media-breakpoint-up(xl) {
+      fill: $indigo;
+    }
+  }
+
+  .title {
+    margin: 28px 0 0;
+    font-weight: bold;
+    font-size: 1.625rem;
+    text-align: center;
+
+    @include media-breakpoint-up(xl) {
+      margin: 0 0 30px;
+      font-weight: 800;
+      font-size: 3rem;
+    }
+  }
+
+  .partnersWrapper {
+    min-height: 67.24vh;
+
+    @include media-breakpoint-up(xl) {
+      min-height: 448px;
+    }
+
+    .partnersList {
+      display: grid;
+      grid-template-columns: 96px 96px;
+      grid-auto-rows: 133px;
+      gap: 13px 53px;
+      justify-content: center;
+      margin: 29px 0 0;
+      padding: 0;
+      overflow-x: hidden !important;
+
+      @include media-breakpoint-up(xl) {
+        grid-template-columns: repeat(4, 125px);
+        grid-auto-rows: 161px;
+        gap: 36px 71px;
+        justify-content: space-between;
+        margin: 0;
+      }
+
+      .verticalTrack {
+        width: 12px;
+        background-color: red;
+      }
+
+      .partnerItem {
+        &.active {
+          .avatar {
+            .circle {
+              .innerCircle {
+                stroke: #0b2e13;
+              }
+            }
+          }
+        }
+
+        .avatar {
+          position: relative;
+          width: 96px;
+          height: 96px;
+          overflow: hidden;
+
+          @include media-breakpoint-up(xl) {
+            width: 125px;
+            height: 125px;
+          }
+
+          .circle {
+            width: 216px;
+            height: 216px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include media-breakpoint-up(xl) {
+              width: 275px;
+              height: 275px;
+            }
+
+            .innerCircle {
+              @include media-breakpoint-up(xl) {
+                stroke: #0b2e13;
+              }
+            }
+          }
+
+          .image {
+            width: 54px;
+            height: 54px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            border-radius: 50%;
+          }
+        }
+
+        .userName {
+          max-width: 96px;
+          margin: 9px 0 0;
+          overflow: hidden;
+          text-align: center;
+          text-overflow: ellipsis;
+          font-size: 1.0625rem;
+          line-height: 1.06;
+
+          @include media-breakpoint-up(xl) {
+            font-size: 1.375rem;
+          }
+        }
+      }
+    }
+  }
+
+  .chooseButton {
+    width: 100%;
+    height: 43px;
+    max-width: 227px;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(xl) {
+      min-height: 43px;
+      background-color: $indigo;
+    }
+  }
+}

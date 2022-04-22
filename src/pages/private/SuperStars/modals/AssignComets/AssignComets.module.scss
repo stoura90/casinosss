@@ -1,0 +1,40 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.row {
+  > div {
+    background-color: #0b2e13;
+    border-radius: 10px;
+    align-items: center;
+    padding: 40px;
+    flex: 1;
+
+    + div {
+      margin-top: 40px;
+    }
+  }
+}
+
+.info {
+  text-align: center;
+  line-height: 40px;
+  font-weight: 800;
+  font-size: 32px;
+
+  .counter {
+    color: #0b2e13;
+    font-size: 48px;
+  }
+}
+
+.footer {
+  justify-content: center;
+
+  button {
+    width: 100%;
+    display: inline-block;
+    max-width: 180px;
+    min-height: 43px;
+  }
+}

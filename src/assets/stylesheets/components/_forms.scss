@@ -1,0 +1,90 @@
+label.horizontal {
+  > input {
+    display: inline;
+    width: auto;
+  }
+}
+
+.form-label.select {
+  padding: 0;
+  border: none;
+
+  select {
+    margin: 0;
+    border: none;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: 0.9rem;
+  }
+
+}
+
+.has-error input, .has-error select, .has-error textarea {
+  border-color: #a94442;
+}
+
+.autocomplete > .action-sheet-container {
+  display: flex;
+  > .action-sheet {
+    left: 6em;
+  }
+}
+
+td > input, td > .autocomplete input {
+  margin: 0 !important;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.account-select {
+  width: auto;
+}
+
+.account-selector, .pubkey-input {
+  clear: right;
+  input {
+    display: block;
+    flex: auto;
+  }
+  > .account-image {
+    float: right;
+    width: 80px;
+    > .icon > svg path {
+      fill: rgba(255, 255, 255, 0.2);
+    }
+
+    @include breakpoint(small only) {
+        display: none;
+    }
+  }
+  > .content-area {
+    //width: 100%;
+    width: calc(100% - 100px);
+    display: inline-block;
+
+    @include breakpoint(small only) {
+        width: 100%;
+    }
+  }
+  .error-area {
+    padding-top: 0.5rem;
+    min-height: 30px;
+    font-size: 1rem;
+    line-height: normal;
+  }
+  .right-label {
+    float: right;
+  }
+}
+
+div.transfer-input {
+  //width: 100%;
+  width: calc(100% - 100px);
+  display: inline-block;
+
+  @include breakpoint(small only) {
+      width: 100%;
+  }
+}

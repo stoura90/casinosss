@@ -1,0 +1,161 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.Education {
+  position: relative;
+  padding: 40px 0 120px;
+
+  @include media-breakpoint-up(xl) {
+    padding: 47px 0 127px;
+  }
+
+  .userInfo {
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .mainTitle {
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: center;
+
+    @include media-breakpoint-up(xl) {
+      font-size: 2rem;
+    }
+
+    span {
+      display: block;
+      color: #0b2e13;
+    }
+  }
+
+  .videoPresentation {
+    position: relative;
+    display: block;
+    margin-top: 40px;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 531px;
+      margin: 64px auto 48px;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 56px;
+      height: 56px;
+      cursor: pointer;
+
+      @include media-breakpoint-up(xl) {
+        width: 92px;
+        height: 92px;
+      }
+    }
+  }
+
+  .formButton,
+  .reviewButton {
+    width: 100%;
+    margin-top: 42px;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 274px;
+      margin: 36px auto 0;
+    }
+  }
+
+  .title {
+    margin: 64px 0 24px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    text-align: center;
+
+    @include media-breakpoint-up(xl) {
+      margin: 88px 0 36px;
+      font-weight: 800;
+      font-size: 3rem;
+    }
+  }
+
+  .slide {
+    min-height: 209px;
+    margin: 0 32px;
+    padding: 17px 18px;
+    background-color: #0b2e13;
+    border-radius: 18px;
+
+    @include media-breakpoint-up(xl) {
+      min-height: 311px;
+      max-width: 430px;
+      margin: 0 auto;
+      padding: 27px 29px;
+    }
+  }
+
+  a[class='carousel-control-prev'],
+  a[class='carousel-control-next'] {
+    width: 32px;
+    justify-content: flex-start;
+    opacity: 1;
+  }
+
+  a[class='carousel-control-next'] {
+    justify-content: flex-end;
+  }
+
+  .arrow {
+    width: 20px;
+    opacity: 1;
+  }
+
+  ol[class='carousel-indicators'] {
+    display: none;
+  }
+
+  .header {
+    .avatar {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+
+      @include media-breakpoint-up(xl) {
+        width: 79px;
+        height: 79px;
+      }
+    }
+
+    .username {
+      margin-left: 14px;
+      font-weight: bold;
+      font-size: 1.25rem;
+
+      @include media-breakpoint-up(xl) {
+        margin-left: 23px;
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+  .description {
+    margin-top: 6px;
+    font-size: 0.875rem;
+    line-height: 1.43;
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 9px;
+      font-size: 1.4375rem;
+      line-height: 1.17;
+    }
+  }
+}

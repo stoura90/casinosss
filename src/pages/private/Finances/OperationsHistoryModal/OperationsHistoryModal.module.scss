@@ -1,0 +1,42 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.OperationsHistoryModalWrapper {
+  position: relative;
+  overflow-y: auto;
+  padding: 45px 0 53px;
+  height: 100%;
+}
+
+.OperationsHistoryModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #0b2e13;
+  overflow: hidden;
+
+  .closeButton {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+
+    @include media-breakpoint-up(xl) {
+      top: 20px;
+      right: 20px;
+
+      path {
+        fill: $indigo;
+      }
+    }
+  }
+
+  .mainTitle {
+    margin: 23px 0 19px;
+    font-weight: bold;
+    font-size: 1.625rem;
+  }
+}

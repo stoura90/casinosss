@@ -1,0 +1,229 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.SuperStars {
+  position: relative;
+  padding: 40px 0 0;
+
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 50px;
+
+    .userInfo {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.Table {
+  position: relative;
+
+  .userName {
+    margin: 0 20px 0 0;
+    padding: 10px;
+    background-color: #0b2e13;
+    font-size: 1.25rem;
+    border-radius: 5px;
+
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
+  }
+
+  .header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 0 20px;
+
+    .close {
+      display: block;
+      cursor: pointer;
+      width: 27px;
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: 47px;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin: 27px 0 60px;
+
+      .close {
+        width: 47px;
+      }
+    }
+  }
+
+  .container {
+    padding-bottom: 40px;
+
+    @include media-breakpoint-up(xl) {
+      display: flex;
+    }
+  }
+
+  .sidebar {
+    .title {
+      color: #0b2e13;
+      margin: 0 0 26px;
+      font-weight: 800;
+      font-size: 26px;
+      line-height: 1;
+
+      @include media-breakpoint-up(xl) {
+        font-size: 62px;
+      }
+    }
+
+    .matrixSelect {
+      width: 100%;
+      position: relative;
+      margin-bottom: 25px;
+      z-index: 3;
+    }
+
+    @include media-breakpoint-up(xl) {
+      flex: 0 0 320px;
+
+      .footer {
+        display: block;
+        margin-top: 100px;
+      }
+    }
+  }
+
+  .content {
+    .footer {
+      display: block;
+    }
+
+    button {
+      min-height: 44px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-left: 40px;
+      flex: 1;
+
+      .footer {
+        display: none;
+      }
+    }
+  }
+
+  .footer {
+    display: none;
+    max-width: 320px;
+    margin: 0 auto;
+
+    .price {
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 2px;
+      font-weight: 700;
+      font-size: 18px;
+      margin: 25px 0;
+      color: #fff;
+
+      @include media-breakpoint-up(xl) {
+        line-height: 34px;
+        font-size: 32px;
+      }
+    }
+
+    button {
+      margin-bottom: 55px;
+
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+
+    > div {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0b2e13;
+      text-decoration: none;
+      border-radius: 50%;
+      line-height: 24px;
+      font-weight: 500;
+      font-size: 20px;
+      cursor: pointer;
+      margin: 0 2px;
+      color: #fff;
+
+      &.active {
+        background-color: #0b2e13;
+        pointer-events: none;
+      }
+
+      &.sideArrow {
+        background-color: #0b2e13;
+      }
+
+      &.arrow {
+        background-color: transparent;
+      }
+
+      &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+
+      .arrowLeft {
+        margin-left: -2px;
+      }
+
+      .arrowRight {
+        margin-right: -2px;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      > div {
+        margin-right: 6px;
+        margin-left: 6px;
+      }
+    }
+  }
+
+  .matrixTree {
+    max-width: 327px;
+    margin: 30px auto;
+    padding: 0;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 706px;
+    }
+
+
+    .secondRow {
+      display: flex;
+      justify-content: space-between;
+      max-width: 327px;
+      margin: 0 auto;
+
+      @include media-breakpoint-up(xl) {
+        width: 100%;
+        max-width: 688px;
+      }
+    }
+  }
+}

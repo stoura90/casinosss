@@ -1,0 +1,150 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import "~bootstrap/scss/mixins";
+
+.AboutUs {
+  padding: 40px 0 73px;
+
+  @include media-breakpoint-up(xl) {
+    padding: 44px 0 125px;
+  }
+
+  .userInfo {
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .mainTitle {
+    margin: 0 0 12px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .mainDescription {
+    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+
+    span {
+      font-weight: bold;
+      font-size: 0.875rem;
+
+      @include media-breakpoint-up(xl) {
+        font-size: 2rem;
+        color: #0b2e13;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 31px;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  }
+
+  .text {
+    margin-bottom: 20px;
+    font-size: 0.75rem;
+    text-align: center;
+
+    span {
+      font-weight: bold;
+      font-size: 0.875rem;
+
+      @include media-breakpoint-up(xl) {
+        font-family: inherit;
+        font-size: 1.5rem;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin: 0;
+      padding: 15px 20px 35px 35px;
+      font-size: 1.5rem;
+      line-height: 1.166;
+      background-color: #0edc30;
+      text-align: left;
+      border-radius: 30px;
+    }
+  }
+
+  .rocket {
+    display: block;
+    width: 187px;
+    height: 170px;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(xl) {
+      width: 214px;
+      height: 195px;
+      transform: rotate(-21.6deg);
+      margin-top: 63px;
+    }
+  }
+
+  .buildUpWrapper {
+    @include media-breakpoint-up(xl) {
+      margin-top: 45px;
+
+      .text {
+        padding: 18px 43px 23px 26px;
+        text-align: right;
+      }
+    }
+  }
+
+  .constructor {
+    display: block;
+    width: 163px;
+    height: 107px;
+    margin: 0 auto 18px;
+
+    @include media-breakpoint-up(xl) {
+      width: 177px;
+      height: 116px;
+      margin-bottom: 0;
+    }
+  }
+
+  .educationWrapper {
+    @include media-breakpoint-up(xl) {
+      margin-top: 45px;
+    }
+  }
+
+  .education {
+    display: block;
+    width: 103px;
+    height: 103px;
+    margin: 0 auto 25px;
+
+    @include media-breakpoint-up(xl) {
+      width: 168px;
+      height: 168px;
+      margin-bottom: 0;
+    }
+  }
+
+  .finalText {
+    margin-top: 16px;
+
+    .text {
+      margin: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 45px;
+
+      .text {
+        padding: 22px 27px;
+
+        span {
+          color: #0b2e13;
+        }
+      }
+    }
+  }
+}

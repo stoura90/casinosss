@@ -1,0 +1,195 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.Header {
+  position: relative;
+  height: 67px;
+  z-index: 4;
+
+  @include media-breakpoint-up(xl) {
+    height: 90px;
+  }
+
+  // Variants
+
+  &.private {
+    background-color: rgba(42, 0, 114, 0);
+
+    .hamburgerButton {
+      margin-left: 0;
+    }
+
+    .mainLogo {
+      display: block;
+      width: 90px;
+      height: 36px;
+      margin: 0 auto;
+    }
+
+    .signoutButton {
+      width: 27px;
+      height: 25px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+
+      img {
+        vertical-align: initial;
+      }
+    }
+  }
+
+  &.public {
+    .wrapper {
+      background-color: rgba(42, 0, 114, 0);
+    }
+  }
+
+  &.visible {
+    .wrapper {
+      transform: translateY(0);
+    }
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15.5px 0;
+    transition: transform 0.95s cubic-bezier(0.09, 0, 0, 1);
+
+    @include media-breakpoint-up(xl) {
+      padding: 25px 0;
+      filter: drop-shadow(0px 4px 30px rgba(85, 218, 20, 0.62));
+    }
+
+    .mainLogo {
+      display: flex;
+      align-items: center;
+
+      .star {
+        width: 37px;
+        height: 36px;
+        animation: rotating 2s linear infinite;
+
+        @include media-breakpoint-up(xl) {
+          width: 42px;
+          height: 40px;
+        }
+      }
+
+      .label {
+        width: 62px;
+        height: 28px;
+        margin: 7px 0 0 2px;
+
+        @include media-breakpoint-up(xl) {
+          width: 56px;
+          height: 17px;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .navMenu {
+      display: none;
+      margin-right: 48px;
+
+      .navLink {
+        font-size: 0.875rem;
+        color: #ffffff;
+        text-decoration: none;
+
+        &:not(:first-child) {
+          margin-left: 53px;
+        }
+      }
+
+      @include media-breakpoint-up(xl) {
+        display: flex;
+      }
+    }
+
+    .signInLink {
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      text-decoration: none;
+
+      img {
+        width: 18px;
+        height: 18px;
+        margin-right: 7px;
+      }
+    }
+
+    .hamburgerButton {
+      width: 24px;
+      height: 24px;
+      margin-left: 16px;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+
+      @include media-breakpoint-up(xl) {
+        display: none;
+      }
+    }
+
+    .mobileNavBar {
+      position: absolute;
+      top: 68px;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: #1443ddb3;
+      overflow: hidden;
+      z-index: 100;
+      transition: height 0.15s ease-in-out;
+
+      &.opened {
+        height: calc(100vh - 67px);
+        overflow-y: auto;
+      }
+
+      @include media-breakpoint-up(xl) {
+        display: none;
+      }
+
+      .mobileNavLink {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 1.625rem;
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: 1px solid #ffffff;
+
+        &:first-child {
+          margin-top: 40px;
+        }
+
+        &:last-child {
+          margin-bottom: 81px;
+        }
+      }
+    }
+  }
+
+  @keyframes rotating {
+    from {
+      transform: rotateY(0deg);
+    }
+
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+}

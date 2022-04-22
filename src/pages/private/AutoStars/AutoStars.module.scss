@@ -1,0 +1,177 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.AutoStars {
+  padding-top: 22px;
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 45px;
+  }
+
+
+  .mainTitle {
+    margin: 0 0 34px;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-align: center;
+
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
+  }
+
+  .tables {
+    position: relative;
+    margin-bottom: 57px;
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 64px;
+      margin-bottom: 30px;
+    }
+
+
+    .table {
+      position: relative;
+      cursor: pointer;
+
+      svg {
+        &.active {
+          path {
+            fill: #0b2e13;
+          }
+        }
+
+        @include media-breakpoint-up(xl) {
+          width: 121px;
+          height: 116px;
+        }
+      }
+
+      .count {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        width: auto;
+        height: 20px;
+        transition: background-color 0.3s ease-in;
+        background-color: #0b2e13;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 20px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #fff;
+        min-width: 20px;
+        padding: 0 5px;
+
+        @include media-breakpoint-up(sm) {
+          border-radius: 15px;
+          line-height: 30px;
+          min-width: 30px;
+          font-size: 16px;
+          right: 10px;
+          width: auto;
+          height: 30px;
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 800;
+        font-size: 1.75rem;
+        color: $white;
+        cursor: pointer;
+
+        @include media-breakpoint-up(xl) {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .head {
+      position: relative;
+      z-index: 2;
+      max-width: min-content;
+      margin: 0 auto;
+    }
+
+    .secondRow,
+    .thirdRow {
+      position: absolute;
+      top: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      width: 218px;
+      margin: 0 auto;
+      justify-content: space-between;
+
+      @include media-breakpoint-up(xl) {
+        top: 29px;
+        width: 419px;
+      }
+    }
+
+    .secondRow {
+      z-index: 1;
+    }
+
+    .thirdRow {
+      top: 66px;
+      width: 346px;
+
+      @include media-breakpoint-up(xl) {
+        top: 100px;
+        width: 676px;
+      }
+    }
+  }
+
+  .banner {
+    display: flex;
+    max-width: max-content;
+    position: relative;
+    margin: 0 auto;
+
+    .autoStarsTitle {
+      display: block;
+      width: 215px;
+      height: 66px;
+      margin: 0 auto;
+
+      @include media-breakpoint-up(xl) {
+        width: 409px;
+        height: 126px;
+        margin-top: 25px;
+      }
+    }
+
+    .car {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 98px;
+      object-fit: cover;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      @include media-breakpoint-up(xl) {
+        top: 107px;
+        left: initial;
+        transform: initial;
+        right: -140px;
+        width: 836px;
+        height: 273px;
+      }
+    }
+  }
+}

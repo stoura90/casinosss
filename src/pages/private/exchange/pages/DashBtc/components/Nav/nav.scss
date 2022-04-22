@@ -1,0 +1,11 @@
+.logo {
+  display: flex;
+  align-items: center;
+  &__text {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    color: #ffc107;
+  }
+}
+

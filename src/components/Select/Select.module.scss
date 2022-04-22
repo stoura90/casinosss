@@ -1,0 +1,87 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.Select {
+  display: flex;
+  height: 59px;
+  cursor: pointer;
+
+  &:hover {
+    .arrow {
+      path {
+        fill: $blue;
+      }
+    }
+  }
+
+  .currentValue {
+    background-color: $indigo;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 60px 0 26px;
+    border: 1px solid $white;
+    border-radius: 55px;
+    font-size: 1.25rem;
+
+    .arrow {
+      width: 14px;
+      height: 21px;
+      position: absolute;
+      top: 50%;
+      right: 32px;
+      transform: translateY(-50%);
+    }
+  }
+
+  .options {
+    height: 0;
+    width: max-content;
+    min-width: 83.24%;
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    border: 1px solid $white;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    opacity: 0;
+    background-color: $indigo;
+
+    &.opened {
+      height: initial;
+      opacity: 1;
+    }
+
+    .wrapper {
+      max-height: 370px;
+      overflow: auto;
+
+      .option {
+        padding: 6px 8px 6px 18px;
+        border-bottom: 1px solid $white;
+        font-size: 1rem;
+
+        &.active {
+          color: $blue;
+        }
+
+        &:hover {
+          color: $blue;
+        }
+
+        &:active {
+          color: $blue;
+        }
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+}

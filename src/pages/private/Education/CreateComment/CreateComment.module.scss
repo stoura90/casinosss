@@ -1,0 +1,179 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.CreateComment {
+  @include media-breakpoint-up(xl) {
+    position: relative;
+  }
+
+  .header {
+    position: absolute;
+    top: -67px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 67px;
+    background-color: $indigo;
+
+    @include media-breakpoint-up(xl) {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      height: 58px;
+      background-color: transparent;
+    }
+
+    .arrow {
+      svg {
+        width: 63px;
+        height: 58px;
+      }
+    }
+  }
+
+  .main {
+    @include media-breakpoint-up(xl) {
+      max-width: 530px;
+      margin: 0 auto;
+    }
+
+    .title {
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 1.125rem;
+
+      @include media-breakpoint-up(xl) {
+        font-size: 3rem;
+        text-align: center;
+      }
+    }
+
+    .rating {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding: 7px 39px;
+      background-color: #0b2e13;
+      border-radius: 25px;
+      direction: rtl;
+
+      @include media-breakpoint-up(xl) {
+        margin: 42px auto 36px;
+        padding: 11px 64px;
+        background-color: #0b2e13;
+      }
+
+      svg {
+        width: 36px;
+        height: 36px;
+
+        @include media-breakpoint-up(xl) {
+          width: 59px;
+          height: 59px;
+
+          path {
+            fill: #0b2e13;
+          }
+        }
+
+        &.active,
+        &.active ~ svg,
+        &:hover,
+        &:hover ~ svg {
+          path {
+            fill: #0b2e13;
+          }
+        }
+      }
+    }
+
+    .form {
+      textarea {
+        height: 237px;
+        width: 100%;
+        padding: 22px;
+        appearance: none;
+        background-color: #0b2e13;
+        border: none;
+        resize: none;
+        border-radius: 25px;
+        color: $white;
+        font-size: 0.75rem;
+        line-height: 1.43;
+
+        @include media-breakpoint-up(xl) {
+          height: 422px;
+          padding: 34px 30px;
+          font-size: 1.125rem;
+          background-color: #0b2e13;
+        }
+      }
+
+      button {
+        width: 100%;
+        margin-top: 35px;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(xl) {
+          max-width: 274px;
+          margin: 31px auto 0;
+        }
+      }
+    }
+
+    .statusModal {
+      max-width: 271px;
+      margin: 167px auto 0;
+      padding: 15px 12px;
+      font-weight: bold;
+      font-size: 1.125rem;
+      line-height: 1.2;
+      background-color: #0b2e13;
+      border-radius: 18px;
+      text-align: center;
+
+      .closeButton {
+        display: none;
+
+        @include media-breakpoint-up(xl) {
+          display: block;
+          position: absolute;
+          top: 30px;
+          right: 34px;
+          width: 27px;
+          height: 27px;
+          cursor: pointer;
+        }
+      }
+
+      @include media-breakpoint-up(xl) {
+        max-width: 559px;
+        width: 559px;
+        height: 266px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        position: absolute;
+        top: 258px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 71px 54px;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.16;
+        filter: drop-shadow(0px 4px 60px #000000);
+      }
+    }
+
+    .invisible {
+      display: none;
+
+      @include media-breakpoint-up(xl) {
+        display: block;
+      }
+    }
+  }
+}
