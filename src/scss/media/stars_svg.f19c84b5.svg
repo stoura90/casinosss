@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ 	"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="800" height="800"
+     viewBox="0 0 800 800">
+
+<defs>
+  <radialGradient id="gate_blue">
+    <stop offset="0%" stop-color="#6bbeed" />
+    <stop offset="100%" stop-color="#" />
+  </radialGradient>
+  <radialGradient id="lock_red">
+    <stop offset="0%" stop-color="#da251d" />
+    <stop offset="100%" stop-color="#ac2c27" />
+  </radialGradient>
+
+  <symbol id="seg">
+    <line x1="400" y1="62" x2="400" y2="123.5" stroke="#000" stroke-width="2"/>
+  </symbol>
+  <symbol id="lock" fill="#aaa9a9" stroke="#000" stroke-width="2">
+    <polygon points="392,85 408,85 441,23 359,23" />
+    <line x1="379.5" y1="61" x2="420.5" y2="61"/>
+    <line x1="377" y1="57" x2="423" y2="57"/>
+    <line x1="375" y1="53" x2="425" y2="53"/>
+    <line x1="373" y1="49" x2="427" y2="49"/>
+    <line x1="371" y1="45" x2="429" y2="45"/>
+    <line x1="369" y1="41" x2="431" y2="41"/>
+    <line x1="367" y1="37" x2="433" y2="37"/>
+    <line x1="365" y1="33" x2="435" y2="33"/>
+    <line x1="363" y1="29" x2="437" y2="29"/>
+    <path d="M301,35 379,29 373,19 A376,376 0 0,0 301,31 Z"/>
+    <path d="M499,35 421,29 427,19 A376,376 0 0,1 499,31 Z"/>
+    <polygon points="377,15 393,71 407,71 423,15"/>
+    <polygon points="377,15 393,63 407,63 423,15"/>
+    <polygon points="384,15 396,49 404,49 416,15" fill="url(#lock_red)"/>
+    <use xlink:href="#seg" transform="rotate(-13.8462,400,400)"/>
+    <use xlink:href="#seg" transform="rotate(-4.6154,400,400)"/>
+    <use xlink:href="#seg" transform="rotate(4.6154,400,400)"/>
+    <use xlink:href="#seg" transform="rotate(13.8462,400,400)"/>
+  </symbol>
+  <symbol id="lines" stroke="#000" stroke-width="2">
+    <line x1="400" y1="123.5" x2="400" y2="135" />
+    <line x1="400" y1="123.5" x2="400" y2="135" transform="rotate(1,400,400)"/>
+    <line x1="400" y1="51" x2="400" y2="62" />
+    <line x1="406.5621" y1="24.0573" x2="400" y2="51" />
+    <line x1="393.4379" y1="24.0573" x2="400" y2="51" />
+  </symbol>
+  <symbol id="lines2">
+    <use xlink:href="#lines" transform="rotate(12,400,400)"/>
+    <use xlink:href="#lines" transform="rotate(10,400,400)"/>
+    <use xlink:href="#lines" transform="rotate(8,400,400)"/>
+    <use xlink:href="#lines" transform="rotate(6,400,400)"/>
+    <use xlink:href="#lines" transform="rotate(4,400,400)"/>
+    <use xlink:href="#lines" transform="rotate(2,400,400)"/>
+    <use xlink:href="#lines"/>
+    <use xlink:href="#lines" transform="rotate(-2,400,400)"/>
+    <use xlink:href="#lines" transform="rotate(-4,400,400)"/>
+    <use xlink:href="#lines" transform="rotate(-6,400,400)"/>
+    <use xlink:href="#lines" transform="rotate(-8,400,400)"/>
+    <use xlink:href="#lines" transform="rotate(-10,400,400)"/>
+  </symbol>
+</defs>
+  
+  <g id="rings" fill="#aaa9a9" stroke="#000" stroke-width="2">
+    <circle cx="400" cy="400" r="376"/>
+    <circle cx="400" cy="400" r="349"/>
+    <circle cx="400" cy="400" r="338"/>
+    <circle cx="400" cy="400" r="276.5"/>
+    <circle cx="400" cy="400" r="265" fill="url(#gate_blue)"/>
+  </g>
+
+  <use xlink:href="#lines2"/>
+  <use xlink:href="#lines2" transform="rotate(24,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(48,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(72,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(96,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(120,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(144,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(168,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(192,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(216,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(240,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(264,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(288,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(312,400,400)"/>
+  <use xlink:href="#lines2" transform="rotate(336,400,400)"/>
+
+<g id="glyphs" fill="none" stroke="black" stroke-width="1">
+  <g id="g1">
+    <polygon points="394,115 393,112 400,102 407,112 406,115 413,115 400,99 387,115"/>
+    <circle cx="400" cy="93" r="3.5"/>
+  </g>
+
+  <g id="g2" transform="rotate(9.2308,400,400)">
+    <polygon points="391,113 388,107 391,100 393,89 406,89 402,101 407,108 407,113 409,116 403,116 405,113 405,108 401,103 393,103 391,107 394,116 390,116"/>
+  </g>
+
+  <g id="g3" transform="rotate(18.4615,400,400)">
+    <polygon points="394,96 385,95 382,95 383,92 385,94 395,95 403,95 406,93 413,96 417,101 413,100 413,97 404,97 404,102                      415,109 417,109 415,112 415,110 403,103 395,103 396,109 396,111 394,111 395,109"/>
+    <polygon points="396,101 402,101 402,97 396,97"/>
+  </g>
+
+  <g id="g4" transform="rotate(27.6923,400,400)">
+    <polygon points="386,98 389,98 406,108 409,114 416,104 407,105 389,96 388,94"/>
+    <polygon points="387,93 384,98 382,97 385,91"/>
+  </g>
+
+  <g id="g5" transform="rotate(36.9231,400,400)">
+    <polygon points="412,97 412,100 415,102 415,94"/>
+    <polygon points="406,97 406,100 410,100 410,97"/>
+    <polygon points="406,90 401,101 406,112 408,113 403,115 404,113 400,102 388,105 386,107 386,103 389,104 400,100 404,89 404,87 407,88"/>
+  </g>
+
+  <g id="g6" transform="rotate(46.1538,400,400)">
+    <polygon points="402,114 396,117 387,103 395,88 407,88 407,84 411,86 409,89 396,89 396,115 402,112 410,112 410,116"/>
+  </g>
+
+  <g id="g7" transform="rotate(55.3846,400,400)">
+    <polygon points="387,116 389,104 396,102 396,99 404,101 409,85 408,82 413,84 411,86 405,103 398,107 397,104 391,106 389,117 390,119 385,119"/>
+  </g>
+
+  <g id="g8" transform="rotate(64.6154,400,400)">
+    <polygon points="397,102 393,95 388,102"/>
+    <polygon points="411,111 407,104 403,110"/>
+  </g>
+
+  <g id="g9" transform="rotate(73.8462,400,400)">
+    <polygon points="384,103 384,111 385,116 384,118 388,117 386,111 398,108 400,108 403,102 402,100 403,90 413,90 415,95 412,98                      411,98 412,101 416,95 413,88 401,89 401,101 398,107 386,109 387,101 383,101"/>
+  </g>
+
+  <g id="g10" transform="rotate(83.0769,400,400)">
+    <polygon points="393,114 388,108 385,114"/>
+    <path d="M 402,93 398,93 401,87 403,90 C 411,91 420,105 406,115 L 399,116 399,113 C 413,111 412,96 402,93 Z"/>
+  </g>
+
+  <g id="g11" transform="rotate(92.3077,400,400)">
+    <polygon points="400,105 405,114 405,117 409,114 407,114 401,104 399,82 391,102"/>
+    <polygon points="403,102 406,102 406,94 402,94"/>
+  </g>
+
+  <g id="g12" transform="rotate(101.5385,400,400)">
+    <polygon points="389,90 383,104 390,103 395,106 395,110 393,109 398,116 398,110 397,111 397,107 399,108 403,112 410,112                      415,95 408,89 408,92 413,95 409,110 403,111 400,107 400,104 395,104 391,102 395,88 "/>
+  </g>
+
+  <g id="g13" transform="rotate(110.7692,400,400)">
+    <polygon points="391,88 397,100 408,101 409,99 413,102 410,103 404,116 404,118 400,116 402,115 408,103 396,102 389,88 386,87 391,85"/>
+  </g>
+
+  <g id="g14" transform="rotate(120,400,400)">
+    <polygon points="390,112 388,112 389,108 390,110 408,114 406,90 404,88 409,87 408,89 410,115"/>
+    <polygon points="394,98 398,94 401,104"/>
+  </g>
+
+  <g id="g15" transform="rotate(129.2308,400,400)">
+    <path d="M 385,114 387,113 C 390,110 412,110 412,110 L 414,112 415,109 412,108 C 412,108 400,94 393,92 L 383,114 C 383,114                385,114 385,114 Z M 393,95 C 393,95 388,107 387,110 394,107 409,108 409,108 409,108 398,96 393,95 Z" />
+  </g>
+
+  <g id="g16" transform="rotate(138.4615,400,400)">
+    <polygon points="386,107 384,102 387,100 398,100 406,96 411,97 415,103 411,109 400,111"/>
+    <polygon points="406,98 398,102 388,102 385,103 387,106 401,109 408,108 408,98"/>
+  </g>
+
+  <g id="g17" transform="rotate(147.6923,400,400)">
+    <polygon points="391,89 400,91 403,88 403,96 400,92 394,91 398,112 406,110 407,116 400,114 397,117"/>
+  </g>
+
+  <g id="g18" transform="rotate(156.9231,400,400)">
+    <polygon points="389,115 400,115 399,106 397,102 395,101 398,99 398,101 400,105 402,114 407,111 410,103 407,103 404,96                      405,90 404,88 408,88 406,90 406,96 408,101 413,101 408,113 402,117 389,118 387,118 387,114"/>
+  </g>
+
+  <g id="g19" transform="rotate(166.1538,400,400)">
+    <polygon points="386,117 389,110 412,108 414,109 415,106 413,106 407,98 412,91 414,90 412,88 412,89 406,97 391,98 391,100                      386,100 384,105 387,106 388,101 406,99 411,107 388,109 385,117 383,118 386,119"/>
+  </g>
+
+  <g id="g20" transform="rotate(175.3846,400,400)">
+    <polygon points="400,109 414,89 415,86 419,91 416,91 402,111 402,113 400,112 383,114 380,104"/>
+  </g>
+
+  <g id="g21" transform="rotate(184.6154,400,400)">
+    <polygon points="409,95 402,96 388,95 387,94 385,93 383,96 384,98 387,97 403,99 411,97 414,93 414,112 411,110 414,119 418,113 416,112 415,90"/>
+  </g>
+
+  <g id="g22" transform="rotate(193.8452,400,400)">
+    <polygon points="403,105 396,106 398,102 419,101 420,102 420,99 419,100 398,101 387,99 379,108 403,107 411,107 412,108 412,105 411,106"/>
+  </g>
+
+  <g id="g23" transform="rotate(203.0769,400,400)">
+    <polygon points="412,97 405,114 385,90"/>
+    <polygon points="407,100 404,107 394,96"/>
+  </g>
+
+  <g id="g24" transform="rotate(212.3077,400,400)">
+    <polygon points="380,101 396,103 419,99 420,97 420,101 419,100 396,106 379,103 378,103 379,99"/>
+  </g>
+
+  <g id="g25" transform="rotate(221.5385,400,400)">
+    <polygon points="402,110 404,117 407,105 405,105 407,98 406,90 402,87 400,88 402,89 404,91 406,98 404,105 401,107 396,100 396,97 390,98"/>
+  </g>
+
+  <g id="g26" transform="rotate(230.7692,400,400)">
+    <path d="M 400,99 394,93 386,90 385,89 383,92 385,91 393,94 399,102 395,115 C 400,113 403,115 406,115 412,115 414,111
+               418,113 415,111 414,105 418,99 412,103 402,101 400,99 Z M 414,103 C 413,106 414,110 414,111 411,112 401,113
+               399,112 L 401,103 C 403,103 411,104 414,103 Z" />
+  </g>
+
+  <g id="g27" transform="rotate(240,400,400)">
+    <polygon points="383,97 416,99 417,98 417,101 416,100 400,100 404,103 409,105 416,105 417,104 417,108 416,107 408,106
+                     401,104 397,100 383,99 381,100 381,97"/>
+  </g>
+
+  <g id="g28" transform="rotate(249.2308,400,400)">
+    <polygon points="389,100 395,109 395,115 404,118 405,114 412,110 411,94 407,96 409,98 410,109 404,113 397,109 391,99 390,96 386,99"/>
+    <polygon points="403,93 400,88 398,93"/>
+  </g>
+
+  <g id="g29" transform="rotate(258.4615,400,400)">
+    <polygon points="380,101 386,110 395,105 396,98 403,106 414,101 415,98 419,96 421,96 420,93 419,94 413,97 413,100 403,104                      396,96 392,105 386,107 382,100 382,98 378,100"/>
+  </g>
+
+  <g id="g30" transform="rotate(267.6923,400,400)">
+    <path d="M 402,103 C 403,105 405,109 406,110 L 397,113 C 398,109 398,104 397,103 L 395,104 C 397,109 394,115 392,116
+             L 394,118 396,115 408,112 410,113 410,111 C 409,110 404,105 404,101 Z"/>
+    <polygon points="388,89 387,93 389,93 393,100 395,98 391,93 402,90 401,96 403,96 404,90 406,88 404,85 402,88 390,91"/>
+    <polygon points="399,102 400,100 398,98 397,99"/>
+    <polygon points="395,103 394,101 395,100 397,101"/>
+    <polygon points="402,101 404,100 403,98 401,99"/>
+  </g>
+
+  <g id="g31" transform="rotate(276.9231,400,400)">
+    <polygon points="411,94 400,89 400,114 388,107"/>
+  </g>
+
+  <g id="g32" transform="rotate(286.1538,400,400)">
+    <path d="M 379,106 398,100 C 397,97 389,94 383,94 L 381,95 382,91 383,92 C 386,93 394,93 400,99
+             L 411,90 418,96 420,96 417,100 416,97 411,92 385,114 Z" />
+  </g>
+
+  <g id="g33" transform="rotate(295.3846,400,400)">
+    <polygon points="391,87 384,104 381,104 385,107 386,105 409,114 409,117 411,118 411,115 417,109 417,101 392,91 393,88 394,87 391,85"/>
+    <polygon points="387,103 410,112 414,102 391,93"/>
+  </g>
+
+  <g id="g34" transform="rotate(304.6154,400,400)">
+    <polygon points="385,109 381,106 379,108 380,111 383,111 395,108 394,106"/>
+    <polygon points="395,99 396,101 394,102 391,101"/>
+    <polygon points="401,99 400,97 398,97 397,100"/>
+    <polygon points="410,93 413,96 418,97 420,96 420,100 418,98 412,97 405,102 401,97"/>
+  </g>
+
+  <g id="g35" transform="rotate(313.8462,400,400)">
+    <path d="M 415,100 L 414,97 411,97 413,99 407,106 C 396,103 384,107 383,109 L 385,112 C 386,105 402,107 408,108 Z" />
+  </g>
+
+  <g id="g36" transform="rotate(323.0769,400,400)">
+    <path d="M 391,114 C 392,97 406,94 409,95 L 411,96 411,91 409,93 C 400,93 391,98 389,113 L 387,115 392,115 Z" />
+  </g>
+
+  <g id="g37" transform="rotate(332.3077,400,400)">
+    <polygon points="409,112 392,108 390,109 388,107 391,106 391,103 393,104 393,106 410,111 412,110 411,114"/>
+    <polygon points="395,97 393,97 392,101 394,102"/>
+    <polygon points="397,93 393,92 395,95"/>
+  </g>
+
+  <g id="g38" transform="rotate(341.5385,400,400)">
+    <path d="M 384,97 C 394,110 409,111 416,112 L 418,114 418,109 416,110 C 401,108 395,106 385,96 L 384,92 380,96 Z" />
+  </g>
+
+  <g id="g39" transform="rotate(350.7692,400,400)">
+    <path d="M 389,106 392,104 390,101 393,94 C 400,102 407,105 415,107 L 417,106 416,110 415,109
+             C 410,107 399,104 394,98 L 393,99 394,104 403,109 406,109 403,112 402,110 393,105 389,108 382,106 383,102 Z" />
+  </g>
+</g>
+
+  <use xlink:href="#lock" transform="rotate(147.6923,400,400)"/>
+  <use xlink:href="#lock" transform="rotate(110.7692,400,400)"/>
+  <use xlink:href="#lock" transform="rotate(73.8462,400,400)"/>
+  <use xlink:href="#lock" transform="rotate(36.9231,400,400)"/>
+  <use xlink:href="#lock"/>
+  <use xlink:href="#lock" transform="rotate(-36.9231,400,400)"/>
+  <use xlink:href="#lock" transform="rotate(-73.8462,400,400)"/>
+  <use xlink:href="#lock" transform="rotate(-110.7692,400,400)"/>
+  <use xlink:href="#lock" transform="rotate(-147.6923,400,400)"/>
+
+  <use xlink:href="#seg" transform="rotate(170.7692,400,400)"/>
+  <use xlink:href="#seg" transform="rotate(180,400,400)"/>
+  <use xlink:href="#seg" transform="rotate(189.2308,400,400)"/>
+</svg>

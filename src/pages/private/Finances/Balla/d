@@ -1,0 +1,197 @@
+import React, { useState, useCallback } from 'react'
+import { Row, Col, Container, Button, Input, Table } from 'reactstrap'
+import { useSelector, useDispatch } from 'react-redux'
+import { formatter } from '../../../utils'
+
+import * as actions from '../../../actions/finance.actions'
+import OperationsHistoryModal from './OperationsHistoryModal'
+import MoneyTransferModal from './MoneyTransferModal'
+import NavBar from '../../../components/layout/Navbar'
+import UserInfo from '../../../components/UserInfo'
+
+import WithdrawalOfMoney from './WithdrawalOfMoney'
+import ReplenishmentOfMoney from './ReplenishmentOfMoney'
+import Balla from './Balla'
+
+function Finances() {
+  const dispatch = useDispatch()
+  const [isOperationsHistoryModalVisible, setIsOperationsHistoryModalVisible] = useState(false)
+  const userInfo = useSelector((state) => state.app.user)
+
+  const handleVisibleTransferMoneyModal = useCallback(() => {
+    dispatch(actions.toggleTransferMoneyModal(true))
+  }, [dispatch])
+
+  const openOperationsHistoryModal = () => {
+    document.body.style.overflow = 'hidden'
+    setIsOperationsHistoryModalVisible(true)
+  }
+
+  const closeOperationsHistoryModal = () => {
+    document.body.style.overflow = 'initial'
+    setIsOperationsHistoryModalVisible(false)
+  }
+
+  return (
+    <>
+      <Container className="root-page">
+        <Row>
+          <Col xl={3} className="d-none d-xl-block">
+            <UserInfo />
+            <NavBar />
+          </Col>
+          <Col>
+            <>
+              <div className="inset_page">
+                <div className="wallets_meta">
+                  <h1 className="h1_wallets">Финансы</h1>
+                  <div className="estimated">
+                    Эквивалент:
+                    <span className="summ">0.00000000 BTC</span>
+                  </div>
+                  <div className="wallets_right_meta">
+                    <div className="ch">
+                      <div className="el_chek">
+                        <label>
+                          <div className="checker" id="uniform-check_hide_zero">
+                            <span>
+                              <Input id="check_hide_zero" type="checkbox"></Input>
+                            </span>
+                          </div>
+                          <strong>Прятать нулевые балансы</strong>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="wallets_table_wrapper" className="dataTables_wrapper no-footer">
+                    <div className="search_box">
+                      <div className="button"></div>
+                      <div id="wallets_table_filter" className="dataTables_filter">
+                        <label>
+                          <Input
+                            type="search"
+                            className=""
+                            placeholder="Поиск"
+                            aria-controls="wallets_table"
+                          />
+                        </label>
+                      </div>
+                    </div>
+                    <div className="dataTables_scroll" width="100%">
+                      <div className="dataTables_scrollHead">
+                        <div className="dataTables_scrollHeadInner">
+                          <table className="big_table big_table_top wallet_table dataTable no-footer">
+                            <thead>
+                              <tr>
+                                <th
+                                  className="sorting"
+                                  tabIndex="0"
+                                  aria-controls="wallets_table"
+                                  rowSpan="1"
+                                  colSpan="1"
+                                  aria-label="Валюта: activate to sort column ascending"
+                                  width="62.8438px"
+                                >
+                                  Валюта
+                                </th>
+                                <th
+                                  width="112.172px"
+                                  className="sorting"
+                                  tabIndex="0"
+                                  aria-controls="wallets_table"
+                                  rowSpan="1"
+                                  colSpan="1"
+                                  aria-label="Баланс: activate to sort column ascending"
+                                >
+                                  Баланс
+                                </th>
+                                <th
+                                  width="98.5px"
+                                  className="sorting"
+                                  tabIndex="0"
+                                  aria-controls="wallets_table"
+                                  rowSpan="1"
+                                  colSpan="1"
+                                  aria-label="В ожидании зачисления: activate to sort column ascending"
+                                >
+                                  В ожидании зачисления
+                                </th>
+                                <th
+                                  width="83.8594px"
+                                  className="sorting"
+                                  tabIndex="0"
+                                  aria-controls="wallets_table"
+                                  rowSpan="1"
+                                  colSpan="1"
+                                  aria-label="На ордерах: activate to sort column ascending"
+                                >
+                                  На ордерах
+                                </th>
+                                <th
+                                  width="112.172px"
+                                  className="sorting sorting_desc"
+                                  tabIndex="0"
+                                  aria-controls="wallets_table"
+                                  rowSpan="1"
+                                  colSpan="1"
+                                  aria-label="Est.BTC: activate to sort column ascending"
+                                  aria-sort="descending"
+                                >
+                                  Est.BTC
+                                </th>
+                                <th
+                                  width="57.7812px"
+                                  className="sorting"
+                                  tabIndex="0"
+                                  aria-controls="wallets_table"
+                                  rowSpan="1"
+                                  colSpan="1"
+                                  aria-label="Ввод: activate to sort column ascending"
+                                >
+                                  Ввод
+                                </th>
+                                <th
+                                  width="59.0156px"
+                                  className="sorting"
+                                  tabIndex="0"
+                                  aria-controls="wallets_table"
+                                  rowSpan="1"
+                                  colSpan="1"
+                                  aria-label="Вывод: activate to sort column ascending"
+                                >
+                                  Вывод
+                                </th>
+                                <th
+                                  width="60.1562px"
+                                  className="sorting"
+                                  tabIndex="0"
+                                  aria-controls="wallets_table"
+                                  rowSpan="1"
+                                  colSpan="1"
+                                  aria-label="История: activate to sort column ascending"
+                                >
+                                  История
+                                </th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                      </div>
+                      <Balla />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </>
+          </Col>
+        </Row>
+      </Container>
+      <MoneyTransferModal />
+      {isOperationsHistoryModalVisible && (
+        <OperationsHistoryModal onClose={closeOperationsHistoryModal} />
+      )}
+    </>
+  )
+}
+
+export default Finances

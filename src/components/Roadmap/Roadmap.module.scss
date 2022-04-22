@@ -1,0 +1,65 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.slider {
+  width: calc(100% + 40px);
+  padding-bottom: 55px;
+  margin: 0 -20px;
+
+  @include media-breakpoint-up(md) {
+    max-width: 800px;
+    margin: 0 auto 100px;
+    padding-bottom: 105px;
+  }
+}
+
+.slideWrapper {
+  display: flex !important;
+  align-items: center;
+  flex-direction: column;
+  background-color: #220d50;
+  padding: 60px 40px;
+  overflow: hidden;
+  height: 580px;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    height: 375px;
+  }
+}
+
+.slideInfo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-shadow: 0 0 30px #df56fb;
+  line-height: 33px;
+  font-weight: bold;
+  font-size: 24px;
+  flex: 1;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+
+    li + li {
+      margin-top: 26px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+    margin-top: 0;
+  }
+}
+
+.slidePicture {
+  @include media-breakpoint-up(md) {
+    order: 2;
+  }
+}

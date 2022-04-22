@@ -1,0 +1,100 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.search {
+  margin-bottom: 40px;
+
+  input[type='text'] {
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: #230b51;
+    border: 1px solid #fff;
+    border-radius: 35px;
+    padding: 5px 15px;
+    font-size: 14px;
+    color: #fff;
+    outline: none;
+    height: 40px;
+    width: 100%;
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    input[type='text'] {
+      padding: 10px 20px;
+      font-size: 20px;
+      height: 60px;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  max-width: min-content;
+  list-style-type: none;
+  margin: 30px auto 60px;
+  padding: 0;
+
+  a {
+    outline: none;
+  }
+
+  li {
+    padding: 0 3px;
+
+    a {
+      width: 30px;
+      height: 30px;
+      display: block;
+      display: flex;
+      justify-content: center;
+      background-color: #3b217c;
+      border-radius: 50%;
+      line-height: 30px;
+      outline: none;
+
+      img {
+        max-width: 22px;
+      }
+    }
+
+    &.active a {
+      background-color: #0b2e13;
+    }
+
+    .arrowLeft {
+      margin-left: -2px;
+    }
+
+    .arrowRight {
+      margin-right: -2px;
+    }
+
+    &:first-child a,
+    &:last-child a {
+      background-color: transparent;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 0;
+  }
+
+
+  @include media-breakpoint-up(xl) {
+    li {
+      padding: 0 6px;
+
+      a {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+  }
+}

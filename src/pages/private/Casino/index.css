@@ -1,0 +1,124 @@
+.wrapp {
+  width: 210px;
+  float: none;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid-wrapp:after, .grid-wrapp:before {
+  content: " ";
+  display: table;
+}
+.grid-col__left {
+  float: left;
+  width: 695px;
+}
+.mainsu {
+  margin-right: 15px;
+  display: block;
+}
+
+.grid-wrapp-cols.pd-sm-both, .grid-wrapp-cols.pd-sm-sides {
+  margin-left: -7px;
+  margin-right: -7px;
+}
+.grid-wrapp-cols.pd-sm-both:not(._not-pad)>[class^=grid-col__] {
+  padding: 7px;
+}
+
+.grid-wrapp-cols>[class^=grid-col__] {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.grid-col__1-12, .grid-col__10-12, .grid-col__11-12, .grid-col__12-12, .grid-col__2-12, .grid-col__3-12, .grid-col__4-12, .grid-col__5-12, .grid-col__6-12, .grid-col__7-12, .grid-col__8-12, .grid-col__9-12 {
+  position: relative;
+  min-height: 1px;
+}
+.grid-col__4-12 {
+  width: 33.33333333%;
+}
+.tmbv {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 7px 3px;
+  width: 193px;
+  height: 140px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 0 1px rgb(63 72 86 / 75%);
+  -moz-box-shadow: 0 0 0 1px rgba(63,72,86,.75);
+  box-shadow: 0 0 0 1px rgb(63 72 86 / 75%);
+  background: url(./assets/img/sys/bg/sprite.png) 0 -120px no-repeat;
+  color: #fff;
+  text-shadow: 0 1px 1px rgb(0 0 0 / 75%);
+  text-decoration: none;
+}
+.tmbv .stickerc {
+  position: absolute;
+  top: 10px;
+  right: auto;
+  bottom: auto;
+  left: 9px;
+}
+
+.stickerc {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 2;
+}
+i {
+  font-style: italic;
+}
+.tmb-fav {
+  position: absolute;
+  top: auto;
+  right: 3px;
+  bottom: 3px;
+  left: auto;
+  width: 26px;
+  height: 26px;
+}
+.tmb-fav .icoc {
+  cursor: pointer;
+}
+
+.icoc-tmb-fav {
+  background-position: -81px -279px;
+}
+.icoc {
+  width: 26px;
+  height: 24px;
+  display: inline-block;
+  background-image: url(./assets/img/sys/bg/sprite.png);
+  background-repeat: no-repeat;
+}
+.tmb-img img {
+  border: 2px solid #000;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 1px rgb(121 131 153 / 85%);
+  -moz-box-shadow: 0 0 1px rgba(121,131,153,.85);
+  box-shadow: 0 0 1px rgb(121 131 153 / 85%);
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.tmb-title {
+  margin: 0 26px 0 1px;
+  font-family: Arial,Helvetica,Verdana,Tahoma,sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

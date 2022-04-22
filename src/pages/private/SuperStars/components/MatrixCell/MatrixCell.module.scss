@@ -1,0 +1,228 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.MatrixCell {
+  position: relative;
+  display: block;
+
+  &.main {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 18px;
+
+    .photo {
+      img {
+        width: 47px;
+        height: 47px;
+
+        @include media-breakpoint-up(xl) {
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 119px;
+      height: 119px;
+      margin: 70px auto 53px;
+    }
+  }
+
+  &.small {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 18px;
+
+    @include media-breakpoint-up(xl) {
+      width: 88px;
+      height: 88px;
+      margin-bottom: 36px;
+    }
+
+
+    .branchingLines {
+      @include media-breakpoint-up(xl) {
+        bottom: -48px;
+        width: 205px;
+        height: 58px;
+      }
+    }
+
+    .branchingHorizontalLines {
+      @include media-breakpoint-up(xl) {
+        bottom: -48px;
+        width: 205px;
+        height: 58px;
+      }
+    }
+  }
+
+  .counter {
+    position: absolute;
+    top: 4px;
+    right: -2px;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    background-color: #0b2e13;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    text-align: center;
+
+    @include media-breakpoint-up(xl) {
+      font-size: 1rem;
+    }
+  }
+
+  .photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $indigo;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 34px;
+      height: 34px;
+      object-fit: cover;
+      border-radius: 50%;
+
+      @include media-breakpoint-up(xl) {
+        width: 49px;
+        height: 49px;
+      }
+    }
+  }
+
+  .avatar {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 89, 247, 0.02) 0%, rgba(255, 89, 247, 0) 100%);
+
+    img {
+      width: 49px;
+      height: 49px;
+    }
+  }
+
+  .photo,
+  .avatar {
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      @include media-breakpoint-up(xl) {
+        & ~ .userName {
+          opacity: 1;
+        }
+      }
+    }
+
+    .shadow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1px;
+      height: 1px;
+      z-index: -1;
+      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 89, 247, 0.02) 0%, rgba(255, 89, 247, 0) 100%);
+      border-radius: 50%;
+    }
+  }
+
+  .branchingLines {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    vertical-align: initial;
+
+    @include media-breakpoint-up(xl) {
+      width: 413px;
+      height: 58px;
+      bottom: -56px;
+
+      path {
+        stroke-width: 1;
+      }
+    }
+  }
+
+  .branchingHorizontalLines {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    vertical-align: initial;
+    width: 269px;
+    height: 39px;
+    bottom: -35px;
+
+    @include media-breakpoint-up(xl) {
+      width: 647px;
+      height: 87px;
+      bottom: -68px;
+
+      path {
+        stroke-width: 2;
+      }
+    }
+  }
+
+  .userName {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -10px);
+    z-index: 3;
+    width: max-content;
+    max-width: 150px;
+    padding: 4px 10px;
+    background-color: #0b2e13;
+    transition: opacity 0.15s ease-in-out;
+    border: 1px solid #8083E6;
+    word-break: break-all;
+    border-radius: 10px;
+    line-height: 0.8rem;
+    text-align: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+    min-width: 82px;
+
+    &:after {
+      content: '▾';
+      display: inline-block;
+      vertical-align: middle;
+      margin: -2px 0 0 5px;
+      font-size: 10px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      top: 30px;
+      left: 0;
+      transform: translateX(calc(-100% - 20px));
+      font-size: 1rem;
+      border-radius: 16px;
+      line-height: 0.8rem;
+      padding: 10px 17px;
+    }
+  }
+
+  .userNameDropdown {
+    font-size: 11px;
+  }
+}

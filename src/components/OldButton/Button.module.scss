@@ -1,0 +1,50 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.Button {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 11px;
+  color: $white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: 1px solid transparent;
+
+  // Sizes
+
+  &.medium {
+    min-height: 44px;
+    font-size: 0.75rem;
+    border-radius: 30px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &.medium {
+      min-height: 56px;
+    }
+
+    &.small {
+      min-height: 39px;
+    }
+  }
+
+  //Colors
+  &.perrywinkle {
+    background-color: rgba(11, 46, 19, 0);
+    border-color: #ffffff;
+  }
+
+  &.violet-blue {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: #fff;
+  }
+
+  &.transparent {
+
+    border: 1px solid $white;
+  }
+}

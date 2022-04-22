@@ -1,0 +1,130 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.ClonesModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: $indigo;
+  overflow: auto;
+
+  @include media-breakpoint-up(xl) {
+    position: absolute;
+    top: 144px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    max-width: 750px;
+    height: auto;
+  }
+
+
+  .header {
+    padding: 40px;
+
+    h3 {
+      margin-bottom: 0;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    & + .content {
+      padding-top: 0;
+    }
+
+    .close {
+      display: block;
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      width: 20px;
+      right: 10px;
+      padding: 0;
+      top: 10px;
+      z-index: 11;
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .content {
+    padding: 40px;
+
+    & + .footer {
+      padding-top: 0;
+    }
+  }
+
+  .row {
+    > div {
+      background-color: #0b2e13;
+      border-radius: 10px;
+      align-items: center;
+      margin-bottom: 40px;
+      padding: 40px;
+      flex: 1;
+    }
+
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      > div {
+        margin-bottom: 0;
+
+        + div {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+
+  .info {
+    line-height: 34px;
+    font-weight: 800;
+    font-size: 32px;
+
+    .counter {
+      color: #0b2e13;
+      font-size: 48px;
+    }
+  }
+
+  .window {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $indigo;
+    align-items: center;
+    position: absolute;
+    padding: 120px 40px;
+    line-height: 34px;
+    font-size: 32px;
+    z-index: 10;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 40px;
+
+    button {
+      width: 100%;
+      display: inline-block;
+      max-width: 180px;
+      min-height: 43px;
+    }
+  }
+}

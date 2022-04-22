@@ -1,0 +1,38 @@
+.container-ruleta{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.container-ruleta-activo{
+    display: grid;
+    justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 205, 205, 0);
+}
+
+.boton-ruleta{
+  width: 300px;
+  justify-self: center;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-weight: 600;
+  background-color: rgba(255, 110, 110, 0.55);
+}
+
+.boton-ruleta:focus{
+  width: 350px;
+  justify-self: center;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-weight: 600;
+  background-color: rgba(255, 110, 110, 0.55);
+}
+.boton-ruleta-oculto{
+  display:none;
+}

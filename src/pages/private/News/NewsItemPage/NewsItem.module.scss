@@ -1,0 +1,173 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+.NewsItem {
+  position: relative;
+  padding: 22px 0 0;
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 43px;
+  }
+
+  .mainImage {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 0;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+
+    @include media-breakpoint-up(xl) {
+      top: 44px;
+      border-radius: 30px;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .newsContent {
+    position: relative;
+    max-width: calc(100% - 13px);
+    margin: 67px auto 0;
+    background-color: #0b2e13;
+    padding: 22px;
+    border-radius: 30px;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 714px;
+      margin-top: 140px;
+      padding: 41px 39px 39px;
+    }
+
+    .closeButtton {
+      position: absolute;
+      top: 38px;
+      right: 39px;
+      display: none;
+
+      @include media-breakpoint-up(xl) {
+        display: block;
+      }
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: 1.25;
+      color: #0b2e13;
+
+      @include media-breakpoint-up(xl) {
+        font-size: 2rem;
+      }
+    }
+
+    .date {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+      font-size: 0.875rem;
+      color: #0b2e13;
+
+      @include media-breakpoint-up(xl) {
+        margin-top: 24px;
+        font-size: 1rem;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+      }
+    }
+
+    .text {
+      margin: 15px 0 0;
+      font-size: 0.875rem;
+      line-height: 1.42857;
+
+      @include media-breakpoint-up(xl) {
+        display: none;
+        max-height: 592px;
+        margin-top: 24px;
+        padding-right: 24px;
+        font-size: 1.25rem;
+        line-height: 1.5;
+      }
+    }
+
+    .scrollbar {
+      display: none;
+
+      @include media-breakpoint-up(xl) {
+        display: block;
+        height: 592px !important;
+      }
+
+      .text {
+        display: block;
+      }
+    }
+
+    .trackY {
+      min-width: 26px;
+      border: 1px solid $white;
+      border-radius: 24px !important;
+      padding: 11px 3px;
+    }
+
+    .thumbY {
+      display: block;
+      background-color: #0b2e13 !important;
+      border-radius: 24px !important;
+    }
+
+    .footer {
+      margin-top: 34px;
+
+      @include media-breakpoint-up(xl) {
+        margin-top: 54px;
+      }
+
+      .delimiter {
+        border-top: 2px solid #0b2e13;
+      }
+
+      .footerTitle {
+        margin: 17px 0 11px;
+        font-size: 0.875rem;
+
+        @include media-breakpoint-up(xl) {
+          margin: 0 24px 0 0;
+          font-size: 1.25rem;
+        }
+      }
+
+      .socialLinks {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          width: 20px;
+          display: flex;
+          align-items: center;
+          margin-right: 15px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
