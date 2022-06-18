@@ -28,7 +28,7 @@
 
   "scripts": {
 
-    "build": "react-scripts build",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; gatsby build ",
 
     "build:n17": "react-scripts --openssl-legacy-provider build",
 
